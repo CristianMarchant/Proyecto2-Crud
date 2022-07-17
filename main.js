@@ -20,7 +20,7 @@ function data() {
 
 /**Funcion para insertar datos en la tabla junto a sus respectivos botones de cambios */
 function insertFilm(data) {
-    var table = document.getElementById("ListFilms").getElementsByTagName('tbody')[0];
+    var table = document.getElementById("ListFilms");
     var newRow = table.insertRow();
     cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.name;
