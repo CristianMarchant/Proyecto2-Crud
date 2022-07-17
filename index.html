@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="base">
+        <div class="container-lg mt-3 p-4">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                    <img src="icono.png" alt="icono" style="width: 80px;">
+                    <h2>Historial de películas</h2>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                    Ingresa las mejores películas que hayas visto.
+                </figcaption>
+                </figure>
+            <br>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="on">
+                    <div>
+                        <label class="form-label">Nombre de la película</label>
+                        <input class="form-control" type="text" name="name" id="name" placeholder="Escriba el nombre de la película">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="form-label">Género de la película</label>
+                        <input class="form-control" type="text" name="gender" id="gender" placeholder="Escriba el género de la película">
+                    </div>
+                    <br>
+                    <div>
+                        <button class="btn btn-success" type="submit">Guardar datos</button>
+                        <button class="btn btn-primary" type="reset">Limpiar datos</button>
+                    </div>
+                    <br>
+                    <hr>
+                </form>
+                <br>
+                <table class="table table-dark table-striped" id="ListFilms">
+                    <thead>
+                        <tr>
+                            <th>Película</th>
+                            <th>Género</th>
+                            <th>Control de cambios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

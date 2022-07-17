@@ -1,0 +1,19 @@
+.base {
+    background-color: whitesmoke;
+    padding: 3%;
+}
+
+.container-lg {
+    background-color: #bababa;
+    width: 100%;
+}
+
+.form-label {
+    color:black;
+    font-size: 25px;
+    font-family:fantasy;
+}
+
+h2 {
+    font-family:fantasy;
+}
