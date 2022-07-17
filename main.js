@@ -6,7 +6,7 @@ function onFormSubmit() {
             insertFilm(formInfo);
         }else{
             updateFilm(formInfo);
-        reset();
+            resetForm();
     }
 }
 
@@ -20,7 +20,7 @@ function data() {
 
 /**Funcion para insertar datos en la tabla junto a sus respectivos botones de cambios */
 function insertFilm(data) {
-    var table = document.getElementById("ListFilms");
+    var table = document.getElementById("ListFilms").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow();
     cell1 = newRow.insertCell(0);
     cell1.innerHTML = data.name;
@@ -29,11 +29,12 @@ function insertFilm(data) {
     cell2 = newRow.insertCell(2);
     cell2.innerHTML = `<button type="button" class="btn btn-warning" onClick="editFilm(this)">Editar</button>
     <button type="button" class="btn btn-danger" onClick="deleteFilm(this)">Borrar</button>`;
+    resetForm();
 
 }
 
 /**Funcion para devolver el formulario a blanco */
-function reset() {
+function resetForm() {
     document.getElementById("name").value = "";
     document.getElementById("gender").value = "";
     selectedRow = null;
@@ -56,5 +57,5 @@ function updateFilm(formInfo) {
 function deleteFilm(td) {
         row = td.parentElement.parentElement;
         document.getElementById("ListFilms").deleteRow(row.rowIndex);
-        reset();
+        resetForm();
 }
